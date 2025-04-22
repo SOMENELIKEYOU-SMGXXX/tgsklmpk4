@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KELOMPOK 4 P5 KELAS XI6 SMAN 1 SEMARANG</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #0b2e98, #4ca1af);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            text-align: center;
+        }
+
+        /* NAVIGATION BAR STYLES */
+        .home-navbar {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+        }
+
+        .ul-navbar {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .li-navbar {
+            margin: 0 15px;
+        }
+
+        .a-navbar {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: color 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .a-navbar:hover {
+            color: #2ecc71;
+        }
+
+        .a-navbar:active {
+            transform: translateY(2px); 
+            transition: transform 0.1s;
+        }
+
+        /* CONTENT STYLES */
+        .container-content {
+            margin: 20px 0;
+        }
+
+        .img-content {
+            height: auto;
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Bayangan pada logo */
+            transition: transform 0.3s;
+        }
+
+        .img-content:hover {
+            transform: scale(1.05);
+        }
+
+        /* FOOTER STYLES */
+        .container-footer {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+
+        .h1-footer {
+            font-size: 18px;
+            font-weight: 400;
+            margin: 0;
+            animation: move 5s linear infinite; 
+        }
+
+        @keyframes move {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+            .ul-navbar {
+                flex-direction: column;
+            }
+
+            .li-navbar {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- NAVIGATION BAR -->
+        <div class="home-navbar">
+            <ul class="ul-navbar">
+                <li class="li-navbar">
+                    <a href="#" class="a-navbar" onclick="buttonClick()">HOME</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="/indexx.html" class="a-navbar" onclick="buttonClick()">GAMES</a>
+                </li>
+                <li class="li-navbar">
+                    <a href="/tes.html" class="a-navbar" onclick="buttonClick()">CONTACT</a>
+                </li>
+            </ul>
+        </div>
+                <!-- NAVIGATION BAR SELESAI -->
+        
+        <!-- CONTENT 1 -->
+        <div class="container-content">
+            <a href="https://id.wikipedia.org/wiki/SMA_Negeri_1_Semarang" class="a-content">
+                <img src="Logo_SMA_Negeri_1_Semarang.png" class="img-content" alt="Logo SMA Negeri 1 Semarang"/>
+            </a>
+        </div>
+        <!-- CONTENT 1 END-->
+        
+        <!-- FOOTER -->
+        <div class="container-footer">
+            <h1 class="h1-footer">Website ini dibuat berdasarkan tugas P5 SMA NEGERI 1 SEMARANG</h1>
+        </div>
+        <!-- FOOTER END -->
+    </div>
+
+    <script>
+        function buttonClick() {
+           
+            console.log("Tombol diklik!");
+        }
+    </script>
+</body>
+</html>

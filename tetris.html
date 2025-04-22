@@ -1,0 +1,100 @@
+<html>
+  <head>
+    <title>Tetris Game</title>
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: linear-gradient(135deg, #2c3e50, #3498db);
+        font-family: Arial, sans-serif;
+        color: white;
+      }
+      #gameContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+      }
+      canvas {
+        border: 4px solid white;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+      #controls {
+        display: flex;
+        gap: 10px;
+      }
+      button {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background-color: rgb(212, 21, 21);
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      button:hover {
+        background-color: #bca0dc !important;
+      }
+      button:active {
+        background-color: #9969d0 !important;
+      }
+      .scoreContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(255, 255, 255, 0.2);
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="gameContainer">
+      <canvas id="canvas" width="400" height="800"></canvas>
+      <div class="scoreContainer">
+        <canvas id="scoreCanvas" width="200" height="50"></canvas>
+      </div>
+      <canvas id="nextShapeCanvas" width="200" height="200"></canvas>
+      <div id="controls">
+        <button onClick="resetVars()">
+          <svg height="100%" version="1.1" viewBox="0 0 36 36" width="100%">
+            <use class="ytp-svg-shadow" xlink:href="#ytp-id-54"></use>
+            <path
+              class="ytp-svg-fill"
+              fill="#ffffff"
+              d="M 18,11 V 7 l -5,5 5,5 v -4 c 3.3,0 6,2.7 6,6 0,3.3 -2.7,6 -6,6 -3.3,0 -6,-2.7 -6,-6 h -2 c 0,4.4 3.6,8 8,8 4.4,0 8,-3.6 8,-8 0,-4.4 -3.6,-8 -8,-8 z"
+              id="ytp-id-54"
+            ></path>
+          </svg>
+        </button>
+        <button onClick="toggleMusic()">🎵</button>
+      </div>
+    </div>
+    <audio id="bgMusic" loop>
+      <source src="pixel-fight-8-bit-arcade-music-background-music-for-video-208775.mp3" type="audio/mpeg">
+    </audio>
+    <script>
+      let musicPlaying = false;
+      const bgMusic = document.getElementById("bgMusic");
+
+      function toggleMusic() {
+        if (musicPlaying) {
+          bgMusic.pause();
+        } else {
+          bgMusic.play();
+        }
+        musicPlaying = !musicPlaying;
+      }
+    </script>
+    <img id="image" src="rotations.png" style="display: none" />
+    <script src="tetris.js"></script>
+  </body>
+</html>
